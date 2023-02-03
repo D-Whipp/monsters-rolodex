@@ -17,14 +17,9 @@ class App extends Component {
         fetch('https://jsonplaceholder.typicode.com/users')
             .then((res) => res.json())
             .then((users) =>
-                this.setState(
-                    () => {
-                        return { monsters: users };
-                    },
-                    () => {
-                        console.log(this.state);
-                    }
-                )
+                this.setState(() => {
+                    return { monsters: users };
+                })
             );
     }
 
@@ -53,7 +48,7 @@ class App extends Component {
                     placeholder="search monsters"
                     onChange={onSearchChange}
                 />
-                <CardList />
+                <CardList monsters={filteredMonsters} />
             </div>
         );
     }
