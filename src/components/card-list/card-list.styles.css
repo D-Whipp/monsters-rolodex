@@ -2,8 +2,9 @@
     width: 85vw;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 20px;
+    display: flex;
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-gap: 20px; 
   }
   
   .card-container {
@@ -21,10 +22,6 @@
     transition: transform 0.25s ease-out;
   }
   
-  /* img {
-    align-self: center;
-  } */
-
   .card-container:hover {
     transform: scale(1.05);
   }
